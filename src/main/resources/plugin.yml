@@ -1,0 +1,23 @@
+# Made by vProLabs [www.vprolabs.xyz]
+
+name: vSafemobs
+version: ${version}
+main: pl.vprolabs.vsafemobs.vSafemobsPlugin
+api-version: '1.21'
+author: vProLabs
+description: 'Spawn safe mobs that move naturally but do not attack players'
+website: 'https://vprolabs.xyz'
+
+commands:
+  vsafemobs:
+    description: Main command for vSafemobs
+    usage: /<command> <spawn|kill|killall|list|reload>
+    aliases: [vsm]
+
+permissions:
+  vsafemobs.spawn:
+    description: Allows spawning safe mobs
+    default: op
+  vsafemobs.admin:
+    description: Allows admin operations (kill, killall, list, reload)
+    default: op
