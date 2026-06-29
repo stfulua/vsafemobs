@@ -18,6 +18,7 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
+    compileOnly(files("../../vAPI/build/libs/vAPI-1.0.0.jar"))
 }
 
 tasks {

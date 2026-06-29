@@ -20,6 +20,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
 import pl.vprolabs.vsafemobs.vSafemobsPlugin;
+import xyz.vprolabs.vapi.VAPI;
 
 import java.util.*;
 
@@ -180,7 +181,7 @@ public class MobManager {
         // For Wardens - they need special handling due to their anger system
         if (entity instanceof Warden warden) {
             // Clear anger for all online players and constantly monitor
-            Bukkit.getScheduler().runTaskTimer(plugin, () -> {
+            VAPI.getInstance().getScheduler().runTimer(() -> {
                 if (warden.isDead()) return;
                 
                 // Clear anger for all players
@@ -192,7 +193,7 @@ public class MobManager {
         }
 
         // For Zombies and other aggressive mobs - constantly clear target
-        Bukkit.getScheduler().runTaskTimer(plugin, () -> {
+        VAPI.getInstance().getScheduler().runTimer(() -> {
             if (entity.isDead()) return;
             
             if (entity instanceof Mob mob) {

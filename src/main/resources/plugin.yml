@@ -6,6 +6,8 @@ main: pl.vprolabs.vsafemobs.vSafemobsPlugin
 api-version: '1.21'
 author: vProLabs
 description: 'Spawn safe mobs that move naturally but do not attack players'
+load: STARTUP
+softdepend: [vAPI]
 website: 'https://vprolabs.xyz'
 
 commands:
